@@ -242,34 +242,25 @@
       gap: 60px;
       align-items: center;
     }
+
     .about-image video {
-  min-height: 450px;
-  max-height: 600px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 20px; /* Mantiene los bordes redondeados */
-  box-shadow: 0 30px 50px rgba(0,0,0,0.1); /* Mantiene la sombra */
-}
-
-/* En pantallas grandes */
-@media (min-width: 1400px) {
-  .about-image video {
-    min-height: 550px;
-    max-height: 700px;
-  }
-}
-
-.about-image {
-  position: relative;
-}
-    .about-image {
-      position: relative;
-    }
-
-    .about-image img {
+      min-height: 450px;
+      max-height: 600px;
       width: 100%;
+      object-fit: cover;
       border-radius: 20px;
       box-shadow: 0 30px 50px rgba(0,0,0,0.1);
+    }
+
+    @media (min-width: 1400px) {
+      .about-image video {
+        min-height: 550px;
+        max-height: 700px;
+      }
+    }
+
+    .about-image {
+      position: relative;
     }
 
     .about-image:before {
@@ -722,6 +713,242 @@
       margin-bottom: 5px;
     }
 
+    /* ===== ADVENTURE BUILDER SECTION ===== */
+    .adventure-builder {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #fff 0%, #faf9f7 100%);
+    }
+
+    .builder-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 50px;
+      margin-top: 30px;
+    }
+
+    .builder-form {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .destinations-list {
+      max-height: 500px;
+      overflow-y: auto;
+      margin: 20px 0 30px;
+      padding-right: 15px;
+    }
+
+    .destination-item {
+      background: #faf9f7;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 15px;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .destination-item:hover {
+      border-color: #b6a28e;
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(182, 162, 142, 0.1);
+    }
+
+    .destination-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .destination-checkbox input[type="checkbox"] {
+      width: 22px;
+      height: 22px;
+      margin-top: 3px;
+      accent-color: #b6a28e;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .destination-content {
+      flex: 1;
+    }
+
+    .destination-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .destination-title i {
+      font-size: 1.3rem;
+      color: #b6a28e;
+    }
+
+    .destination-title h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0;
+      color: #1e2b36;
+    }
+
+    .destination-location {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #5a6b7a;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .destination-location i {
+      color: #b6a28e;
+      font-size: 0.8rem;
+    }
+
+    .destination-description {
+      color: #5a6b7a;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .destination-price {
+      font-weight: 600;
+      color: #1e2b36;
+      font-size: 1.1rem;
+    }
+
+    .destination-price span {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    .total-price {
+      background: linear-gradient(135deg, #1e2b36, #2c3e4f);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: center;
+      margin: 25px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn-adventure {
+      background: #25d366;
+      font-size: 1.2rem;
+      padding: 18px;
+    }
+
+    .btn-adventure:hover {
+      background: #128C7E;
+    }
+
+    .builder-info {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      height: fit-content;
+    }
+
+    .info-steps {
+      margin: 30px 0;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 25px;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background: #b6a28e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .step-text h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #1e2b36;
+    }
+
+    .step-text p {
+      color: #5a6b7a;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .benefits-box {
+      background: #faf9f7;
+      padding: 25px;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+
+    .benefits-box h4 {
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 15px;
+      color: #1e2b36;
+    }
+
+    .benefits-box h4 i {
+      color: #b6a28e;
+      margin-right: 10px;
+    }
+
+    .benefits-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .benefits-box li {
+      margin-bottom: 10px;
+      color: #2c3e4f;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .benefits-box li i {
+      color: #25d366;
+    }
+
+    .destinations-list::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .destinations-list::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .destinations-list::-webkit-scrollbar-thumb {
+      background: #b6a28e;
+      border-radius: 10px;
+    }
+
+    .destinations-list::-webkit-scrollbar-thumb:hover {
+      background: #8b7a6a;
+    }
+
     /* Footer */
     footer {
       background: #1e2b36;
@@ -832,17 +1059,12 @@
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
-      .hero {
-        background-attachment: scroll;
-      }
-    }
-    
     @media (max-width: 1024px) {
       h2 { font-size: 2.2rem; }
       .hero h1 { font-size: 4rem; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
+      .builder-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -869,6 +1091,10 @@
         left: 0;
       }
 
+      .hero {
+        background-attachment: scroll;
+      }
+
       .hero h1 { font-size: 3rem; }
       .about-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
@@ -882,6 +1108,12 @@
         font-size: 1.8rem;
         bottom: 20px;
         right: 20px;
+      }
+      .destination-title {
+        flex-wrap: wrap;
+      }
+      .total-price {
+        font-size: 1.4rem;
       }
     }
 
@@ -909,9 +1141,7 @@
       <h3>Your Cart <i class="fas fa-shopping-cart"></i></h3>
       <button class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></button>
     </div>
-    <div class="cart-items" id="cartItems">
-      <!-- Cart items will be dynamically added here -->
-    </div>
+    <div class="cart-items" id="cartItems"></div>
     <div class="cart-footer">
       <div class="cart-total">
         <span>Total:</span>
@@ -928,11 +1158,9 @@
   <nav>
     <div class="nav-container">
       <a href="#" class="logo">CABO <span>3D</span></a>
-      
       <div class="menu-toggle">
         <i class="fas fa-bars"></i>
       </div>
-
       <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -965,7 +1193,7 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-image">
-          <video width="100%" height="auto" controls autoplay muted loop style="border-radius: 20px; box-shadow: 0 30px 50px rgba(0,0,0,0.1); max-height: 500px; width: 100%; object-fit: cover;">
+          <video width="100%" height="auto" controls autoplay muted loop>
             <source src="https://cabotransportation3d.com/wp-content/uploads/2021/01/INICIO.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
           </video>
@@ -973,32 +1201,13 @@
         <div>
           <h2>Your Premier Transportation Partner</h2>
           <p style="font-size: 1.2rem; color: #5a6b7a; margin-bottom: 30px;">At Cabo Transportation 3D, we've been creating unforgettable experiences for over 10 years. Our fleet of luxury vehicles and team of expert drivers ensure your journey through Los Cabos is as spectacular as the destination itself.</p>
-          
           <div class="features-grid">
-            <div class="feature-item">
-              <i class="fas fa-phone-alt"></i>
-              <h4>24/7 Concierge</h4>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-calendar-check"></i>
-              <h4>Free Cancellations</h4>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-champagne-glasses"></i>
-              <h4>Complimentary Drinks</h4>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-shield-alt"></i>
-              <h4>Best Price Guarantee</h4>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-wifi"></i>
-              <h4>Free WiFi in Vehicles</h4>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-language"></i>
-              <h4>Bilingual Drivers</h4>
-            </div>
+            <div class="feature-item"><i class="fas fa-phone-alt"></i><h4>24/7 Concierge</h4></div>
+            <div class="feature-item"><i class="fas fa-calendar-check"></i><h4>Free Cancellations</h4></div>
+            <div class="feature-item"><i class="fas fa-champagne-glasses"></i><h4>Complimentary Drinks</h4></div>
+            <div class="feature-item"><i class="fas fa-shield-alt"></i><h4>Best Price Guarantee</h4></div>
+            <div class="feature-item"><i class="fas fa-wifi"></i><h4>Free WiFi in Vehicles</h4></div>
+            <div class="feature-item"><i class="fas fa-language"></i><h4>Bilingual Drivers</h4></div>
           </div>
         </div>
       </div>
@@ -1010,12 +1219,9 @@
     <div class="container">
       <div class="catalog-header">
         <h2>Our Signature Tours & Experiences</h2>
-        <p>Discover the best of Los Cabos with our carefully curated selection of tours and transportation services. Each experience is designed to showcase the beauty and magic of Baja California Sur.</p>
+        <p>Discover the best of Los Cabos with our carefully curated selection of tours and transportation services.</p>
       </div>
-
-      <div class="tours-grid" id="toursGrid">
-        <!-- Tour cards will be dynamically loaded here -->
-      </div>
+      <div class="tours-grid" id="toursGrid"></div>
     </div>
   </section>
 
@@ -1023,50 +1229,8 @@
   <section id="destinations" class="cabo-info">
     <div class="container">
       <h2>Discover Baja California Sur</h2>
-      <p style="font-size: 1.2rem; max-width: 800px; margin-bottom: 30px;">From stunning beaches to desert landscapes, Cabo San Lucas offers endless adventures. Here's what awaits you:</p>
-      
-      <div class="info-grid">
-        <div class="info-card">
-          <i class="fas fa-umbrella-beach"></i>
-          <h3>Medano Beach</h3>
-          <p>The only swimmable beach in Cabo, lined with restaurants, water sports, and vibrant atmosphere. Perfect for swimming, jet skis, and paddleboarding.</p>
-        </div>
-        <div class="info-card">
-          <i class="fas fa-ship"></i>
-          <h3>El Arco & Land's End</h3>
-          <p>The iconic rock formation where the Pacific meets the Sea of Cortez. Accessible only by boat - we offer private tours with champagne sunset cruises.</p>
-        </div>
-        <div class="info-card">
-          <i class="fas fa-water"></i>
-          <h3>Cabo Pulmo National Park</h3>
-          <p>A UNESCO World Heritage site with the oldest living reef in North America. World-class snorkeling and diving with sea lions, tropical fish, and sea turtles.</p>
-        </div>
-        <div class="info-card">
-          <i class="fas fa-mountain"></i>
-          <h3>El Desierto & Migriño</h3>
-          <p>Experience the stunning Baja desert with camel rides, ATV adventures, and the famous sand dunes. Sunset views that will take your breath away.</p>
-        </div>
-        <div class="info-card">
-          <i class="fas fa-fish"></i>
-          <h3>Sportfishing</h3>
-          <p>Known as the "Marlin Capital of the World," Cabo offers year-round fishing for marlin, dorado, tuna, and wahoo. Private charters available.</p>
-        </div>
-        <div class="info-card">
-          <i class="fas fa-wine-glass-alt"></i>
-          <h3>San José del Cabo</h3>
-          <p>The charming colonial town with art galleries, gourmet restaurants, and the famous Thursday night Art Walk. A must-visit for culture lovers.</p>
-        </div>
-        <div class="info-card">
-          <i class="fas fa-hiking"></i>
-          <h3>Todos Santos</h3>
-          <p>A magical pueblo mágico famous for surfing, the Hotel California, and stunning beaches. Just an hour from Cabo, perfect for a day trip.</p>
-        </div>
-        <div class="info-card">
-          <i class="fas fa-cocktail"></i>
-          <h3>Sunset Monalisa</h3>
-          <p>One of the most romantic restaurants in the world, perched on the cliffs with breathtaking views of the Arch. We provide luxury transportation.</p>
-        </div>
-      </div>
+      <p style="font-size: 1.2rem; max-width: 800px; margin-bottom: 30px;">From stunning beaches to desert landscapes, Cabo San Lucas offers endless adventures.</p>
+      <div class="info-grid" id="infoGrid"></div>
     </div>
   </section>
 
@@ -1075,20 +1239,13 @@
     <div class="container">
       <h2>Contact Us</h2>
       <p style="font-size: 1.2rem; max-width: 700px;">Have questions or need a custom itinerary? We're here to help 24/7.</p>
-
       <div class="contact-grid">
         <div class="contact-form">
           <h3 style="margin-bottom: 30px;">Send us a message</h3>
           <form id="contactForm" onsubmit="sendContactForm(event)">
-            <div class="form-group">
-              <input type="text" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <input type="text" id="subject" placeholder="Subject" required>
-            </div>
+            <div class="form-group"><input type="text" id="name" placeholder="Your Name" required></div>
+            <div class="form-group"><input type="email" id="email" placeholder="Your Email" required></div>
+            <div class="form-group"><input type="text" id="subject" placeholder="Subject" required></div>
             <div class="form-group">
               <select id="service" required>
                 <option value="">Select a service</option>
@@ -1098,44 +1255,86 @@
                 <option value="Custom Package">Custom Package</option>
               </select>
             </div>
+            <div class="form-group"><textarea id="message" placeholder="Your Message" required></textarea></div>
+            <button type="submit" class="btn-submit"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h3>Get in touch</h3>
+          <div class="contact-info-item"><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><p>C. Mar de Aral, Miramar<br>Cabo San Lucas, B.C.S., Mexico</p></div></div>
+          <div class="contact-info-item"><i class="fas fa-phone-alt"></i><div><h4>Call Us</h4><p>Office: +52 624 124 3996<br>David Orta: +52 624 136 5931</p></div></div>
+          <div class="contact-info-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p>sales@cabotransportation3d.com</p></div></div>
+          <div class="contact-info-item"><i class="fas fa-clock"></i><div><h4>Hours</h4><p>24/7 - Always available for you</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVENTURE BUILDER SECTION (NUEVA) -->
+  <section id="adventure-builder" class="adventure-builder">
+    <div class="container">
+      <h2>Build Your Cabo Adventure</h2>
+      <p style="font-size: 1.2rem; max-width: 700px;">Select your destinations and we'll calculate the price for your perfect experience.</p>
+
+      <div class="builder-grid">
+        <!-- Left Column: Selection Form -->
+        <div class="builder-form">
+          <h3 style="margin-bottom: 30px;">Choose Your Activities</h3>
+          <form id="adventureForm" onsubmit="sendAdventureForm(event)">
             <div class="form-group">
-              <textarea id="message" placeholder="Your Message" required></textarea>
+              <input type="text" id="adventureName" placeholder="Your Full Name" required>
             </div>
-            <button type="submit" class="btn-submit">
-              <i class="fab fa-whatsapp"></i> Send via WhatsApp
+            <div class="form-group">
+              <input type="email" id="adventureEmail" placeholder="Your Email" required>
+            </div>
+            
+            <!-- Destinations Selection -->
+            <div class="destinations-list" id="destinationsList"></div>
+            
+            <!-- Total Price -->
+            <div class="total-price" id="totalPrice">Total: $0 USD</div>
+            
+            <button type="submit" class="btn-submit btn-adventure">
+              <i class="fab fa-whatsapp"></i> Send Quote via WhatsApp
             </button>
           </form>
         </div>
 
-        <div class="contact-info">
-          <h3>Get in touch</h3>
-          <div class="contact-info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <h4>Location</h4>
-              <p>C. Mar de Aral, Miramar<br>Cabo San Lucas, B.C.S., Mexico</p>
+        <!-- Right Column: Info & Instructions -->
+        <div class="builder-info">
+          <h3>How it works</h3>
+          <div class="info-steps">
+            <div class="step-item">
+              <div class="step-number">1</div>
+              <div class="step-text">
+                <h4>Select Activities</h4>
+                <p>Check the boxes next to the adventures you want to experience.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-number">2</div>
+              <div class="step-text">
+                <h4>Auto-Calculated Price</h4>
+                <p>We automatically calculate the total based on your selections.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-number">3</div>
+              <div class="step-text">
+                <h4>Send via WhatsApp</h4>
+                <p>Review your selection and send it directly to our team.</p>
+              </div>
             </div>
           </div>
-          <div class="contact-info-item">
-            <i class="fas fa-phone-alt"></i>
-            <div>
-              <h4>Call Us</h4>
-              <p>Office: +52 624 124 3996<br>David Orta: +52 624 136 5931</p>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <h4>Email</h4>
-              <p>sales@cabotransportation3d.com</p>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <i class="fas fa-clock"></i>
-            <div>
-              <h4>Hours</h4>
-              <p>24/7 - Always available for you</p>
-            </div>
+          
+          <div class="benefits-box">
+            <h4><i class="fas fa-star"></i> Why book with us?</h4>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Best price guaranteed</li>
+              <li><i class="fas fa-check-circle"></i> Free cancellation</li>
+              <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
+              <li><i class="fas fa-check-circle"></i> Bilingual guides</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -1153,7 +1352,6 @@
             <p><i class="fas fa-envelope"></i> sales@cabotransportation3d.com</p>
           </div>
         </div>
-
         <div class="footer-column">
           <h4>Quick Links</h4>
           <a href="#home">Home</a>
@@ -1162,14 +1360,12 @@
           <a href="#destinations">Destinations</a>
           <a href="#contact">Contact</a>
         </div>
-
         <div class="footer-column">
           <h4>Contact</h4>
           <a href="tel:+526241243996"><i class="fas fa-phone-alt"></i> Office: +52 624 124 3996</a>
           <a href="https://wa.me/526241365931" target="_blank"><i class="fab fa-whatsapp"></i> David Orta: +52 624 136 5931</a>
           <a href="#"><i class="fas fa-clock"></i> 24/7 Support</a>
         </div>
-
         <div class="footer-column">
           <h4>Follow Us</h4>
           <div class="social-links">
@@ -1181,7 +1377,6 @@
           <p style="margin-top: 25px; color: #d4c3b5;">Your needs are our priority</p>
         </div>
       </div>
-
       <div class="copyright">
         <p>&copy; 2026 Cabo Transportation 3D. All rights reserved. Luxury transfers & tours in Los Cabos, Baja California Sur, Mexico.</p>
       </div>
@@ -1189,187 +1384,163 @@
   </footer>
 
   <script>
-    // Tour data
+    // ===== T O U R   D A T A =====
     const tours = [
-      {
-        id: 1,
-        category: "WATER SPORTS",
-        title: "Cabo Parasailing Adventure",
-        description: "Experience breathtaking aerial views of Cabo San Lucas while parasailing above the Sea of Cortez. Fly safely with certified instructors and enjoy panoramic views of El Arco and Medano Beach.",
-        highlights: "1 hour • Safety equipment included • Ocean views • Professional crew",
-        price: 99,
-        image: "https://cabotransportation3d.com/wp-content/uploads/2021/01/DSC_1533_resultado-768x499.jpg",
-        badge: "Top Rated"
-      },
-      {
-        id: 2,
-        category: "ADVENTURE",
-        title: "Superman Zipline Canopy Tour",
-        description: "Feel the ultimate adrenaline rush with the famous Superman-style zipline in Cabo. Fly over desert canyons and enjoy one of the longest and fastest canopy circuits in Baja California Sur.",
-        highlights: "3 hours • Zipline circuit • Safety gear • Bilingual guides",
-        price: 139,
-        image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-outdoor-768x512.jpg",
-        badge: "Extreme Adventure"
-      },
-      {
-        id: 3,
-        category: "ADVENTURE",
-        title: "Cabo ATV Desert Tour",
-        description: "Ride powerful ATVs through the Baja desert and along the Pacific coastline. Explore sand dunes, mountain trails, and scenic ocean viewpoints in Los Cabos.",
-        highlights: "2 hours • ATV included • Safety gear • Ocean views",
-        price: 129,
-        image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-atv-768x512.jpg",
-        badge: "Best Seller"
-      },
-      {
-        id: 4,
-        category: "WATER SPORTS",
-        title: "Jet Ski Tour in Cabo San Lucas",
-        description: "Speed across the crystal-clear waters of Cabo on a guided Jet Ski tour. Discover iconic landmarks including El Arco and Lover's Beach.",
-        highlights: "1 hour • Jet Ski included • Life jacket • Guided tour",
-        price: 119,
-        image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-jetski-768x512.jpg",
-        badge: "Water Fun"
-      },
-      {
-        id: 5,
-        category: "OFF-ROAD",
-        title: "Cabo Off-Road UTV Adventure",
-        description: "Explore rugged desert trails and hidden Baja landscapes on an exciting off-road UTV tour. Perfect for adventure lovers visiting Los Cabos.",
-        highlights: "2 hours • UTV vehicle • Desert trails • Safety equipment",
-        price: 159,
-        image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-offroad-768x512.jpg",
-        badge: "Adventure Pick"
-      },
-      {
-        id: 6,
-        category: "OUTDOOR",
-        title: "Electric Bike Beach & Desert Tour",
-        description: "Discover Cabo's natural beauty on an eco-friendly electric bike tour. Ride along scenic desert paths and stunning Pacific Ocean beaches.",
-        highlights: "2 hours • Electric bike • Helmet included • Scenic routes",
-        price: 109,
-        image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-elecbike-768x512.jpg",
-        badge: "Eco Friendly"
-      },
-      {
-        id: 7,
-        category: "WILDLIFE",
-        title: "Swim with Dolphins Experience in Cabo",
-        description: "Enjoy a once-in-a-lifetime dolphin swimming experience in Cabo San Lucas. Interact, swim, and learn about marine life with professional trainers in a safe environment.",
-        highlights: "2 hours • Dolphin interaction • Life vest • Educational program",
-        price: 179,
-        image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-dolpsig-768x512.jpg",
-        badge: "Wildlife Favorite"
-      },
-      {
-        id: 8,
-        category: "DESERT EXPERIENCE",
-        title: "Camel Ride in the Cabo Desert",
-        description: "Experience a unique camel ride through the Baja desert near Cabo San Lucas. Learn about local culture and enjoy spectacular Pacific Ocean views.",
-        highlights: "2 hours • Camel ride • Desert tour • Tequila tasting",
-        price: 149,
-        image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-camel-768x512.jpg",
-        badge: "Unique Experience"
-      },
-      {
-        id: 9,
-        category: "COMBO TOUR",
-        title: "ATV & Camel Combo Adventure in Cabo",
-        description: "Combine two of Cabo's most popular tours in one unforgettable adventure. Ride an ATV through the Baja desert and enjoy a relaxing camel experience by the Pacific coast.",
-        highlights: "4 hours • ATV ride • Camel experience • Tequila tasting",
-        price: 189,
-        image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-camel-768x512.jpg",
-        badge: "Top Combo"
-      }
+      { id: 1, category: "WATER SPORTS", title: "Cabo Parasailing Adventure", description: "Experience breathtaking aerial views of Cabo San Lucas while parasailing above the Sea of Cortez.", highlights: "1 hour • Safety equipment included • Ocean views", price: 99, image: "https://cabotransportation3d.com/wp-content/uploads/2021/01/DSC_1533_resultado-768x499.jpg", badge: "Top Rated" },
+      { id: 2, category: "ADVENTURE", title: "Superman Zipline Canopy Tour", description: "Feel the ultimate adrenaline rush with the famous Superman-style zipline in Cabo.", highlights: "3 hours • Zipline circuit • Safety gear", price: 139, image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-outdoor-768x512.jpg", badge: "Extreme Adventure" },
+      { id: 3, category: "ADVENTURE", title: "Cabo ATV Desert Tour", description: "Ride powerful ATVs through the Baja desert and along the Pacific coastline.", highlights: "2 hours • ATV included • Safety gear", price: 129, image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-atv-768x512.jpg", badge: "Best Seller" },
+      { id: 4, category: "WATER SPORTS", title: "Jet Ski Tour in Cabo San Lucas", description: "Speed across the crystal-clear waters of Cabo on a guided Jet Ski tour.", highlights: "1 hour • Jet Ski included • Life jacket", price: 119, image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-jetski-768x512.jpg", badge: "Water Fun" },
+      { id: 5, category: "OFF-ROAD", title: "Cabo Off-Road UTV Adventure", description: "Explore rugged desert trails and hidden Baja landscapes on an exciting off-road UTV tour.", highlights: "2 hours • UTV vehicle • Desert trails", price: 159, image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-offroad-768x512.jpg", badge: "Adventure Pick" },
+      { id: 6, category: "OUTDOOR", title: "Electric Bike Beach & Desert Tour", description: "Discover Cabo's natural beauty on an eco-friendly electric bike tour.", highlights: "2 hours • Electric bike • Helmet included", price: 109, image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-elecbike-768x512.jpg", badge: "Eco Friendly" },
+      { id: 7, category: "WILDLIFE", title: "Swim with Dolphins Experience", description: "Enjoy a once-in-a-lifetime dolphin swimming experience in Cabo San Lucas.", highlights: "2 hours • Dolphin interaction • Life vest", price: 179, image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-dolpsig-768x512.jpg", badge: "Wildlife Favorite" },
+      { id: 8, category: "DESERT EXPERIENCE", title: "Camel Ride in the Cabo Desert", description: "Experience a unique camel ride through the Baja desert near Cabo San Lucas.", highlights: "2 hours • Camel ride • Desert tour", price: 149, image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-camel-768x512.jpg", badge: "Unique Experience" },
+      { id: 9, category: "COMBO TOUR", title: "ATV & Camel Combo Adventure", description: "Combine two of Cabo's most popular tours in one unforgettable adventure.", highlights: "4 hours • ATV ride • Camel experience", price: 189, image: "https://cabotransportation3d.com/wp-content/uploads/2021/06/act-camel-768x512.jpg", badge: "Top Combo" }
     ];
 
-    // Cart functionality
+    // ===== A D V E N T U R E   B U I L D E R   D A T A =====
+    const destinations = [
+      { id: 1, icon: "fas fa-parachute-box", name: "Parasailing over Medano Beach", location: "Cabo San Lucas – Beach Adventure", description: "Fly over the clear waters of Cabo San Lucas with a parasailing flight (~10 min).", price: 89, priceRange: "$89 USD per person" },
+      { id: 2, icon: "fas fa-motorcycle", name: "ATV Ride (Beach & Desert)", location: "Cabo San Lucas Trails", description: "Ride an ATV along desert terrain and beach paths (~2–3 hours).", price: 104, priceRange: "$79–$130 USD per person" },
+      { id: 3, icon: "fas fa-tree", name: "Zip Line Adventure (Canopy Tour)", location: "Los Cabos Zip Line Park", description: "Enjoy aerial zip lines across canyon landscapes.", price: 119, priceRange: "$99–$139 USD per person" },
+      { id: 4, icon: "fas fa-crow", name: "Camel Ride on the Beach", location: "Cabo Desert & Coastline", description: "Camel tour along ocean beach with scenic views.", price: 85, priceRange: "$76–$95 USD per person" },
+      { id: 5, icon: "fas fa-fish", name: "Dolphin Swim / Encounter Experience", location: "Cabo Marine Park", description: "Swim or interact with dolphins in a guided marine encounter.", price: 179, priceRange: "$139–$219 USD per person" },
+      { id: 6, icon: "fas fa-water", name: "Snorkeling at Pelican's Rock & Arch", location: "Cabo San Lucas – Arch", description: "Boat snorkel trip to iconic reef and sea lion spots.", price: 199, priceRange: "$159–$239 USD per person" },
+      { id: 7, icon: "fas fa-ship", name: "Whale Watching Tour (Seasonal)", location: "Cabo Bay", description: "Seasonal whale watching cruise (~2–6 hours).", price: 114, priceRange: "$99–$130 USD per person" },
+      { id: 8, icon: "fas fa-tachometer-alt", name: "Ultimate Water Adventure Combo", location: "Cabo San Lucas", description: "Multi-activity combo with Jet Ski, parasail, snorkel & boat ride.", price: 224, priceRange: "$199–$249 USD per person" },
+      { id: 9, icon: "fas fa-sun", name: "Private Boat Sunset Cruise", location: "Cabo San Lucas Marina", description: "Private boat cruise at sunset with optional dining.", price: 920, priceRange: "$890–$950 USD for private charter" },
+      { id: 10, icon: "fas fa-anchor", name: "Sportfishing Charter (Full Day)", location: "Sea of Cortez", description: "Full day fishing for marlin, dorado & tuna with experienced crew.", price: 550, priceRange: "$550 USD per person" }
+    ];
+
+    // ===== C A R T   F U N C T I O N S =====
     let cart = [];
 
-    // Load tours
     function loadTours() {
       const toursGrid = document.getElementById('toursGrid');
-      toursGrid.innerHTML = tours.map(tour => `
-        <div class="tour-card">
-          <div class="tour-image">
-            <img src="${tour.image}" alt="${tour.title}">
-            <span class="tour-badge">${tour.badge}</span>
-          </div>
-          <div class="tour-info">
-            <div class="tour-category">${tour.category}</div>
-            <h3 class="tour-title">${tour.title}</h3>
-            <p class="tour-description">${tour.description}</p>
-            <div class="tour-highlights">
-              <i class="fas fa-clock"></i> ${tour.highlights}
-            </div>
-            <div class="tour-footer">
-              <div class="tour-price">$${tour.price} <span>USD</span></div>
-              <button class="btn-add-to-cart" onclick="addToCart(${tour.id})">
-                <i class="fas fa-cart-plus"></i> Add to Cart
-              </button>
-            </div>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    // Add to cart
-    function addToCart(tourId) {
-      const tour = tours.find(t => t.id === tourId);
-      const existingItem = cart.find(item => item.id === tourId);
-      
-      if (existingItem) {
-        existingItem.quantity += 1;
-      } else {
-        cart.push({ ...tour, quantity: 1 });
-      }
-      
-      updateCart();
-      openCart();
-    }
-
-    // Remove from cart
-    function removeFromCart(tourId) {
-      cart = cart.filter(item => item.id !== tourId);
-      updateCart();
-    }
-
-    // Update cart display
-    function updateCart() {
-      const cartItems = document.getElementById('cartItems');
-      const cartCount = document.getElementById('cartCount');
-      const cartTotal = document.getElementById('cartTotal');
-      
-      // Update count
-      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-      cartCount.textContent = totalItems;
-      
-      // Update items
-      if (cart.length === 0) {
-        cartItems.innerHTML = '<p style="text-align: center; color: #7f8c8d; padding: 20px;">Your cart is empty</p>';
-      } else {
-        cartItems.innerHTML = cart.map(item => `
-          <div class="cart-item">
-            <div class="cart-item-image">
-              <img src="${item.image}" alt="${item.title}">
-            </div>
-            <div class="cart-item-details">
-              <div class="cart-item-title">${item.title}</div>
-              <div class="cart-item-price">$${item.price} USD x ${item.quantity}</div>
-              <div class="cart-item-remove" onclick="removeFromCart(${item.id})">
-                <i class="fas fa-trash"></i> Remove
+      if (toursGrid) {
+        toursGrid.innerHTML = tours.map(tour => `
+          <div class="tour-card">
+            <div class="tour-image"><img src="${tour.image}" alt="${tour.title}"><span class="tour-badge">${tour.badge}</span></div>
+            <div class="tour-info">
+              <div class="tour-category">${tour.category}</div>
+              <h3 class="tour-title">${tour.title}</h3>
+              <p class="tour-description">${tour.description}</p>
+              <div class="tour-highlights"><i class="fas fa-clock"></i> ${tour.highlights}</div>
+              <div class="tour-footer">
+                <div class="tour-price">$${tour.price} <span>USD</span></div>
+                <button class="btn-add-to-cart" onclick="addToCart(${tour.id})"><i class="fas fa-cart-plus"></i> Add to Cart</button>
               </div>
             </div>
           </div>
         `).join('');
       }
+    }
+
+    function loadDestinations() {
+      const destinationsList = document.getElementById('destinationsList');
+      if (destinationsList) {
+        destinationsList.innerHTML = destinations.map(dest => `
+          <div class="destination-item">
+            <div class="destination-checkbox">
+              <input type="checkbox" id="dest-${dest.id}" value="${dest.id}" onchange="calculateTotal()">
+              <div class="destination-content">
+                <div class="destination-title"><i class="${dest.icon}"></i><h4>${dest.name}</h4></div>
+                <div class="destination-location"><i class="fas fa-map-marker-alt"></i><span>${dest.location}</span></div>
+                <div class="destination-description">${dest.description}</div>
+                <div class="destination-price">${dest.priceRange}</div>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function calculateTotal() {
+      const checkboxes = document.querySelectorAll('#destinationsList input[type="checkbox"]:checked');
+      let total = 0;
+      checkboxes.forEach(checkbox => {
+        const destId = parseInt(checkbox.value);
+        const destination = destinations.find(d => d.id === destId);
+        if (destination) total += destination.price;
+      });
+      document.getElementById('totalPrice').innerHTML = `Total: $${total} USD`;
+    }
+
+    function sendAdventureForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('adventureName').value;
+      const email = document.getElementById('adventureEmail').value;
+      const checkboxes = document.querySelectorAll('#destinationsList input[type="checkbox"]:checked');
       
-      // Update total
+      if (!name || !email) { alert('Please fill in your name and email'); return false; }
+      if (checkboxes.length === 0) { alert('Please select at least one destination'); return false; }
+      
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) { alert('Please enter a valid email address'); return false; }
+      
+      let message = `*New Adventure Quote Request*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A%0A*Selected Destinations:*%0A`;
+      let total = 0;
+      
+      checkboxes.forEach(checkbox => {
+        const destId = parseInt(checkbox.value);
+        const dest = destinations.find(d => d.id === destId);
+        if (dest) { message += `• ${dest.name} - $${dest.price} USD%0A`; total += dest.price; }
+      });
+      
+      message += `%0A*Total Estimated Price:* $${total} USD%0A%0APlease confirm availability and let me know the next steps.`;
+      
+      window.open(`https://wa.me/526241365931?text=${encodeURIComponent(message)}`, '_blank');
+      
+      document.getElementById('adventureForm').reset();
+      document.getElementById('totalPrice').innerHTML = 'Total: $0 USD';
+      checkboxes.forEach(cb => cb.checked = false);
+      
+      const button = document.querySelector('.btn-adventure');
+      const originalText = button.innerHTML;
+      button.innerHTML = '<i class="fas fa-check"></i> Quote Sent!';
+      button.style.backgroundColor = '#25D366';
+      setTimeout(() => { button.innerHTML = originalText; button.style.backgroundColor = ''; }, 3000);
+      
+      return false;
+    }
+
+    function addToCart(tourId) {
+      const tour = tours.find(t => t.id === tourId);
+      const existingItem = cart.find(item => item.id === tourId);
+      if (existingItem) existingItem.quantity += 1;
+      else cart.push({ ...tour, quantity: 1 });
+      updateCart();
+      openCart();
+    }
+
+    function removeFromCart(tourId) {
+      cart = cart.filter(item => item.id !== tourId);
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartItems = document.getElementById('cartItems');
+      const cartCount = document.getElementById('cartCount');
+      const cartTotal = document.getElementById('cartTotal');
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      cartCount.textContent = totalItems;
+      
+      if (cart.length === 0) cartItems.innerHTML = '<p style="text-align: center; color: #7f8c8d; padding: 20px;">Your cart is empty</p>';
+      else {
+        cartItems.innerHTML = cart.map(item => `
+          <div class="cart-item">
+            <div class="cart-item-image"><img src="${item.image}" alt="${item.title}"></div>
+            <div class="cart-item-details">
+              <div class="cart-item-title">${item.title}</div>
+              <div class="cart-item-price">$${item.price} USD x ${item.quantity}</div>
+              <div class="cart-item-remove" onclick="removeFromCart(${item.id})"><i class="fas fa-trash"></i> Remove</div>
+            </div>
+          </div>
+        `).join('');
+      }
       const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
       cartTotal.textContent = `$${total} USD`;
     }
 
-    // Toggle cart
     function toggleCart() {
       document.getElementById('cartSidebar').classList.toggle('open');
       document.getElementById('overlay').classList.toggle('active');
@@ -1380,82 +1551,36 @@
       document.getElementById('overlay').classList.add('active');
     }
 
-    // Checkout via WhatsApp
     function checkout() {
-      if (cart.length === 0) {
-        alert('Your cart is empty!');
-        return;
-      }
-      
+      if (cart.length === 0) { alert('Your cart is empty!'); return; }
       let message = "Hello! I'd like to book the following:%0A%0A";
-      
-      cart.forEach(item => {
-        message += `* ${item.title} - $${item.price} USD x ${item.quantity}%0A`;
-      });
-      
+      cart.forEach(item => message += `* ${item.title} - $${item.price} USD x ${item.quantity}%0A`);
       const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-      message += `%0ATotal: $${total} USD%0A%0A`;
-      message += "Please confirm availability and let me know the next steps.";
-      
+      message += `%0ATotal: $${total} USD%0A%0APlease confirm availability and let me know the next steps.`;
       window.open(`https://wa.me/526241365931?text=${message}`, '_blank');
     }
 
-    // ===== FUNCIÓN CORREGIDA DEL FORMULARIO DE CONTACTO =====
-    // Esta es la ÚNICA función sendContactForm que debe existir
     function sendContactForm(event) {
-      // Prevenir que el formulario se envíe de la manera tradicional
       event.preventDefault();
-      
-      // Obtener los valores del formulario
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const subject = document.getElementById('subject').value;
       const service = document.getElementById('service').value;
       const message = document.getElementById('message').value;
       
-      // Validar que todos los campos requeridos estén llenos
-      if (!name || !email || !subject || !service || !message) {
-        alert('Please fill in all fields');
-        return false;
-      }
-      
-      // Validar formato de email
+      if (!name || !email || !subject || !service || !message) { alert('Please fill in all fields'); return false; }
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return false;
-      }
+      if (!emailRegex.test(email)) { alert('Please enter a valid email address'); return false; }
       
-      // Número de WhatsApp (usando el número de David que aparece en el sitio)
-      const phoneNumber = '526241365931'; // +52 624 136 5931 sin el +
+      const whatsappMessage = encodeURIComponent(`*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Service:* ${service}%0A*Message:* ${message}`);
+      window.open(`https://wa.me/526241365931?text=${whatsappMessage}`, '_blank');
       
-      // Crear el mensaje para WhatsApp
-      const whatsappMessage = encodeURIComponent(
-        `*New Contact Form Submission*%0A%0A` +
-        `*Name:* ${name}%0A` +
-        `*Email:* ${email}%0A` +
-        `*Subject:* ${subject}%0A` +
-        `*Service:* ${service}%0A` +
-        `*Message:* ${message}`
-      );
-      
-      // Abrir WhatsApp
-      window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, '_blank');
-      
-      // ¡IMPORTANTE! Limpiar el formulario
       document.getElementById('contactForm').reset();
-      
-      // Feedback visual
       const button = document.querySelector('.btn-submit');
       const originalText = button.innerHTML;
       button.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
       button.style.backgroundColor = '#25D366';
-      
-      // Restaurar el botón después de 3 segundos
-      setTimeout(() => {
-        button.innerHTML = originalText;
-        button.style.backgroundColor = '';
-      }, 3000);
+      setTimeout(() => { button.innerHTML = originalText; button.style.backgroundColor = ''; }, 3000);
       
       return false;
     }
@@ -1465,7 +1590,6 @@
       document.querySelector('.nav-links').classList.toggle('active');
     });
 
-    // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         document.querySelector('.nav-links').classList.remove('active');
@@ -1474,15 +1598,10 @@
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
 
@@ -1500,6 +1619,7 @@
 
     // Initialize
     loadTours();
+    loadDestinations();
     updateCart();
   </script>
 </body>
